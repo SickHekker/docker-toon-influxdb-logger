@@ -38,9 +38,9 @@ def save_data(sensor):
 		
 
 while True:
-    try:
-	save_data('toon')
-	time.sleep(30) 
+	try:
+		save_data('toon')
+		time.sleep(30) 
 	except KeyboardInterrupt:
    		sys.exit()
         
