@@ -10,4 +10,4 @@ COPY toonlog.py /src/toonlog.py
 
 COPY Toon.py /src/Toon.py
 
-CMD python /src/toonlog.py
+CMD python /src/toonlog.py &
