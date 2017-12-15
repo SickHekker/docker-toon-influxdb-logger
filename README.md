@@ -10,5 +10,5 @@ put your information in the toonlog.py file for the influxdb server and eneco lo
 
 docker build -t toonlog .
 
-docker run --name=toonlog toonlog
+docker run -d --name=toonlog toonlog
 
