@@ -28,7 +28,7 @@ def save_data(sensor):
                 	"timestamp": current_time,
                 	"fields": {
 				"temperature": float("{0:0.1f}".format(temperature))
-				"power": "%d" % power["value"]
+				"power": power["value"]
 			}
            	 }]
         	# print(json_body) #for debug, not enabled
