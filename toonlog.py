@@ -9,7 +9,7 @@ import sys
 toonusername = "YOURTOONUSERNAME"
 toonpassword = "YOURTOONPASSWORD"
 
-toon = Toon(toonusername,toonpassword)
+toon = Toon(toonusername, toonpassword)
 
 client = InfluxDBClient('address', port, 'user', 'password', 'database')
 
@@ -27,8 +27,8 @@ def save_data(sensor):
                 	"measurement": "toon",
                 	"timestamp": current_time,
                 	"fields": {
-                    	    "temperature": float("{0:0.1f}".format(temperature))
-			    "power": "%d" % power["value"]
+				"temperature": float("{0:0.1f}".format(temperature))
+				"power": "%d" % power["value"]
 			}
            	 }]
         	# print(json_body) #for debug, not enabled
