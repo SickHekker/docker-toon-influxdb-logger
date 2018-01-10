@@ -16,7 +16,7 @@ client = InfluxDBClient('address', port, 'user', 'password', 'database')
 def save_data(sensor):
 	toon.login()
    	current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    	thermostat = toon.get_thermostat_info()
+	thermostat = toon.get_thermostat_info()
 	temperature = temp = float(thermostat["currentTemp"]) / 100
 	power = toon.get_power_usage()
 	toon.logout()
