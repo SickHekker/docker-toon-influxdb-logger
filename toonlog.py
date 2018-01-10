@@ -31,7 +31,7 @@ def save_data(sensor):
 			    "power": float("{0:0.1f}".format(power))
 			}
            	 }]
-        # print(json_body)
+        	# print(json_body) #for debug, not enabled
         	client.write_points(json_body)
 		
 		
