@@ -18,7 +18,7 @@ def save_data(sensor):
    	current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     	thermostat = toon.get_thermostat_info()
 	temperature = temp = float(thermostat["currentTemp"]) / 100
-	currentpower = toon.get_powerusage()
+	power = toon.get_powerusage()
 	toon.logout()
 	if temperature is not None:
         	print('Sensor={0}  Temp={1:0.1f}*C Power={0:0.1f}watts'.format(sensor, temperature, currentpower))
@@ -28,7 +28,7 @@ def save_data(sensor):
                 	"timestamp": current_time,
                 	"fields": {
                     	    "temperature": float("{0:0.1f}".format(temperature))
-			    "currentpower": float("{0:0.1f}".format(currentpower))
+			    "power": float("{0:0.1f}".format(power))
 			}
            	 }]
         # print(json_body)
