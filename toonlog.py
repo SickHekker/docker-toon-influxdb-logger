@@ -22,7 +22,6 @@ def save_data(sensor):
     power = toon.get_power_usage()
     toon.logout()
     if temperature is not None:
-            print('Sensor={0}  Temp={1:0.1f}*C Power={0:0.1f}watts'.format(sensor, temperature, power))
             json_body = [
                 {
                     "measurement": "toon",
