@@ -11,7 +11,7 @@ toonpassword = "YOURTOONPASSWORD"
 
 toon = Toon(toonusername, toonpassword)
 
-client = InfluxDBClient('address', port, 'user', 'password', 'database')
+client = InfluxDBClient('address', port, 'user', 'password', 'database', ssl=False)
 
 
 def save_data(sensor):
